@@ -7,18 +7,22 @@ The "ABCDEfGHIJKL" project aims to develop a comprehensive solution for [briefly
 ## Steps to Determine Technical Requirements
 
 1. **Understand the Project Scope**
+
    - Define the overall goals and objectives of the project.
    - Identify the target audience and stakeholders.
 
 2. **Identify Key Functionalities**
+
    - List the core features and functionalities that the project must include.
    - Prioritize the functionalities based on their importance and impact.
 
 3. **Detail System Architecture and Design**
+
    - Outline the high-level system architecture.
    - Describe the main components and their interactions.
 
 4. **Define Technical Specifications**
+
    - Specify the technical requirements for each component.
    - Include details such as programming languages, frameworks, libraries, and tools.
 

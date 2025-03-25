@@ -12,9 +12,9 @@ const securityHeadersPlugin = () => ({
       res.setHeader('X-Content-Type-Options', 'nosniff');
       next();
     });
-  }
+  },
 });
 
 export default defineConfig({
-  plugins: [react(), securityHeadersPlugin()]
+  plugins: [react(), securityHeadersPlugin()],
 });

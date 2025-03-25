@@ -45,16 +45,15 @@ const UserInterface = () => {
       <h1>User Interface Components</h1>
       <div className="mode-selector">
         {/* Changed to add association between label and select */}
-        <label htmlFor="mode-select">
-          Select Mode:
-        </label>
-        <select id="mode-select" aria-label="Select Mode" value={mode} onChange={(e) => setMode(e.target.value)}>
-          <option value="simple">
-            Simple (Aggregated)
-          </option>
-          <option value="expert">
-            Expert/Hybrid (Granular)
-          </option>
+        <label htmlFor="mode-select">Select Mode:</label>
+        <select
+          id="mode-select"
+          aria-label="Select Mode"
+          value={mode}
+          onChange={(e) => setMode(e.target.value)}
+        >
+          <option value="simple">Simple (Aggregated)</option>
+          <option value="expert">Expert/Hybrid (Granular)</option>
         </select>
       </div>
 
@@ -77,8 +76,13 @@ const UserInterface = () => {
           {/* Granular multiple-choice options */}
           <div>
             <label>Blockchain Platform:</label>
-            <select onChange={(e) => handleDecision({ platform: e.target.value })} defaultValue="">
-              <option value="" disabled>Select platform</option>
+            <select
+              onChange={(e) => handleDecision({ platform: e.target.value })}
+              defaultValue=""
+            >
+              <option value="" disabled>
+                Select platform
+              </option>
               <option value="Hyperledger">Hyperledger</option>
               <option value="ConsenSys">ConsenSys</option>
               <option value="Polygon">Polygon</option>
@@ -87,8 +91,13 @@ const UserInterface = () => {
           </div>
           <div>
             <label>Deployment Type:</label>
-            <select onChange={(e) => handleDecision({ deployment: e.target.value })} defaultValue="">
-              <option value="" disabled>Select deployment</option>
+            <select
+              onChange={(e) => handleDecision({ deployment: e.target.value })}
+              defaultValue=""
+            >
+              <option value="" disabled>
+                Select deployment
+              </option>
               <option value="local">Local</option>
               <option value="cloud">Cloud</option>
               <option value="hybrid">Hybrid</option>
@@ -96,8 +105,13 @@ const UserInterface = () => {
           </div>
           <div>
             <label>Security Level:</label>
-            <select onChange={(e) => handleDecision({ security: e.target.value })} defaultValue="">
-              <option value="" disabled>Select security level</option>
+            <select
+              onChange={(e) => handleDecision({ security: e.target.value })}
+              defaultValue=""
+            >
+              <option value="" disabled>
+                Select security level
+              </option>
               <option value="basic">Basic</option>
               <option value="advanced">Advanced</option>
               <option value="enterprise">Enterprise</option>
@@ -112,13 +126,9 @@ const UserInterface = () => {
         {/* Implement drag-and-drop functionality */}
       </div>
       {/* Interactive forms for configuration design */}
-      <form className="config-form">
-        {/* Implement form elements */}
-      </form>
+      <form className="config-form">{/* Implement form elements */}</form>
       {/* Navigation elements for ease of use */}
-      <nav className="navigation">
-        {/* Implement navigation elements */}
-      </nav>
+      <nav className="navigation">{/* Implement navigation elements */}</nav>
       {/* Dashboard */}
       <div className="dashboard">
         <h2>Dashboard</h2>
@@ -130,16 +140,22 @@ const UserInterface = () => {
         <h2>Configuration Wizards</h2>
         {/* Render ConfigWizard only for expert mode */}
         {mode === 'expert' && (
-            <div className="config-wizard-section">
-            <ConfigWizard onComplete={(wizardConfig: any) => handleDecision({ advancedWizard: wizardConfig })} />
-            </div>
+          <div className="config-wizard-section">
+            <ConfigWizard
+              onComplete={(wizardConfig: any) =>
+                handleDecision({ advancedWizard: wizardConfig })
+              }
+            />
+          </div>
         )}
       </div>
       {/* Decision Logic Tree */}
       <div className="decision-tree">
         <h2>Decision Logic Tree</h2>
         {/* Implement decision logic tree */}
-        <button onClick={() => handleDecision({ key: 'value' })}>Make Decision</button>
+        <button onClick={() => handleDecision({ key: 'value' })}>
+          Make Decision
+        </button>
       </div>
       {/* Generate Configuration File */}
       <div className="generate-config">

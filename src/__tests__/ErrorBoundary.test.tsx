@@ -5,7 +5,7 @@ import { test, expect, vi } from 'vitest';
 
 // Synchronous throw in render to trigger the error boundary.
 const ProblemChild = () => {
-  throw new Error("Test error");
+  throw new Error('Test error');
 };
 
 test('ErrorBoundary displays fallback UI when an error occurs', async () => {
